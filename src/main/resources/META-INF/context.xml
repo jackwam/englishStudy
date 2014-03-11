@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+	<Resource name="englishDs"
+		auth="Container"
+		type="javax.sqlDataSource"
+		driverClassName=""
+		url="jdbc:mysql://localhost:3306/muse"
+		username="muze"
+		password="jack!234"
+		maxActive="40"
+		maxIdle="10"
+		maxWait="-1" />
+</Context>
