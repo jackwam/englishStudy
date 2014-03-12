@@ -9,6 +9,9 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
+	
+	
+	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
@@ -22,7 +25,5 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="pencil.com.study" />
-	
-	
-	
+		
 </beans:beans>
