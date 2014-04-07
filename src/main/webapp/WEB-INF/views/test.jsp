@@ -6,9 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
+
 <body>
-<button name="save_btn"  value="저장하기">저장하기</button>
-	test.jsp
+	123
+	<button name="save_btn"  value="저장하기"><a href="/test">저장하기</a></button>
+		test. 111jsp
 	<button name="view_btn"  value="보기">보기</button>
+
 </body>
 </html>

@@ -6,7 +6,13 @@
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+		<param-value>/WEB-INF/spring/*-context.xml</param-value>
+	</context-param>
+	
+	<!-- sitemesh and log4j is included this project -->
+	<context-param>
+		<param-name>sitemesh.configfile</param-name>
+		<param-value>/WEB-INF/spring/viewTemplate/sitemesh.xml</param-value>
 	</context-param>
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
@@ -20,7 +26,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+			<param-value>/WEB-INF/spring/appServlet/*-context.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -30,4 +36,56 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+
+	<!--한글 셋팅-->
+	<!-- <filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+		<param-name>encoding</param-name>
+		<param-value>utf-8</param-value>
+		</init-param>
+		<init-param>
+		<param-name>forceEncoding</param-name>
+		<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+	
+	
+	
+	<!-- sitemesh Filter -->
+	<!-- <filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>    is used from the company
+		 <filter-class>opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+		 <filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+		 <init-param></init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+	
+	
+	<filter>
+		<filter-name>sitemesh1</filter-name>
+		 <filter-class>pencil.com.study.web.Test2</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh1</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		 <filter-class>pencil.com.study.web.Test1</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>
