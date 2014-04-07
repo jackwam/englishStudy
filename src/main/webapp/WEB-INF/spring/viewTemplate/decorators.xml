@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/views/decorators">
+
+    <!-- define exclude -->
+    <excludes>
+    	<pattern>/css/*</pattern>
+    	<pattern>/images/*</pattern>
+    	<pattern>/js/*</pattern>
+        <pattern>/ajax/*</pattern>
+        <pattern>/rest/*</pattern>
+        <pattern>/*Excel</pattern>
+        <pattern>/htm/*</pattern>
+    </excludes>
+  
+    <!-- index decorator -->
+    <decorator name="main" page="main.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    
+</decorators>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<!-- <!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd"> -->
+
+
+<sqlMap namespace="english">
+ 	
+ 	<!-- 검색 resultClass 를 map으로 주면 interface를 초기화 해줄 수 없서서 오류 -->
+	<select id="getList" resultClass="hashmap">
+		SELECT 
+			*
+		FROM
+			ENGLISH
+	</select>
+</sqlMap>
